@@ -1,0 +1,26 @@
+2026-03-20T10:34:55+00:00 DEBUG #8848 - [New Request] GET /myphamskytechcongnguyen/wp-admin/admin.php
+2026-03-20T10:34:55+00:00 DEBUG #8848 - GET https://api.woocommerce.com/integrations/ppc/v1/customer/partners/K8SKZ36LQBWXJ/merchant-integrations/
+Response: Array
+(
+    [code] => 404
+    [message] => Not Found
+)
+
+Response Body: {"statusCode":404,"error":"Not Found","message":"Not Found"}
+
+2026-03-20T10:34:55+00:00 WARNING #8848 - [Error] Not Found CONTEXT: {"args":{"method":"GET","headers":{"Authorization":"Bearer token","Content-Type":"application/json"}},"response":{"headers":{},"body":"{"statusCode":404,"error":"Not Found","message":"Not Found"}","response":{"code":404,"message":"Not Found"},"cookies":[],"filename":null,"http_response":{"data":null,"headers":null,"status":null}}}
+2026-03-20T13:52:04+00:00 DEBUG #7725 - [New Request] GET /myphamskytechcongnguyen/wp-admin/plugins.php
+2026-03-20T13:52:04+00:00 DEBUG #7725 - Webhook lock acquired for 'unregister'.
+2026-03-20T13:52:04+00:00 DEBUG #7725 - Webhook operation 'unregister' started.
+2026-03-20T13:52:05+00:00 DEBUG #7725 - GET https://api.woocommerce.com/integrations/ppc/v1/notifications/webhooks
+Response: Array
+(
+    [code] => 404
+    [message] => Not Found
+)
+
+Response Body: {"statusCode":404,"error":"Not Found","message":"Not Found"}
+
+2026-03-20T13:52:05+00:00 ERROR #7725 - Failed to delete webhooks: [Error] Not Found
+2026-03-20T13:52:05+00:00 INFO #7725 - Webhooks deleted.
+2026-03-20T13:52:05+00:00 DEBUG #7725 - Webhook lock released for 'unregister'.

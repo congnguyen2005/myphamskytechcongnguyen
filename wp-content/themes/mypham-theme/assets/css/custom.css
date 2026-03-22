@@ -1,0 +1,243 @@
+/* ====================
+   VARIABLES
+==================== */
+:root {
+  --primary: #ff6b6b;
+  --primary-dark: #ff5252;
+  --secondary: #4ecdc4;
+  --dark: #2c3e50;
+  --light: #f8f9fa;
+  --gray: #6c757d;
+  --white: #ffffff;
+  --shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+/* ====================
+   RESET
+==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: var(--dark);
+  background: var(--white);
+}
+
+/* ====================
+   CONTAINER
+==================== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ====================
+   BUTTON
+==================== */
+.btn {
+  padding: 12px 28px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* ====================
+   PRICE
+==================== */
+.price-current {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.price-old {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* ====================
+   HEADER
+==================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--white);
+  z-index: 1000;
+}
+
+body.admin-bar .site-header {
+  top: 32px;
+}
+
+/* ====================
+   NAVIGATION
+==================== */
+.header-nav {
+  background: var(--dark);
+}
+
+.main-navigation .primary-menu {
+  display: flex;
+  list-style: none;
+}
+
+.main-navigation .primary-menu > li > a {
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.main-navigation .primary-menu > li:hover > a {
+  background: var(--primary);
+}
+
+/* ====================
+   DROPDOWN
+==================== */
+.main-navigation .sub-menu {
+  position: absolute;
+  background: white;
+  display: none;
+}
+
+.main-navigation li:hover .sub-menu {
+  display: block;
+}
+
+/* ====================
+   SHOP PAGE (KHÔNG áp dụng HOME)
+==================== */
+body:not(.home) .shop-page {
+  padding: 100px 0 60px;
+}
+
+body:not(.home) .shop-wrapper {
+  display: flex;
+  gap: 40px;
+}
+
+body:not(.home) .shop-sidebar {
+  width: 280px;
+}
+
+/* ====================
+   CART
+==================== */
+body:not(.home) .cart-page {
+  padding: 120px 0 60px;
+  background: var(--light);
+}
+
+/* ====================
+   CONTACT
+==================== */
+body:not(.home) .contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* ====================
+   FOOTER
+==================== */
+footer {
+  background: var(--dark);
+  color: white;
+  padding: 60px 0;
+}
+
+/* ====================
+   PAGE HEADER (CHẶN HOME)
+==================== */
+body:not(.home) .page-header-breadcrumb {
+  background: linear-gradient(135deg, var(--light), #e9ecef);
+  padding: 140px 0 40px;
+  text-align: center;
+}
+
+body:not(.home) .page-header-breadcrumb .page-title {
+  margin-top: 100px;
+  font-size: 36px;
+}
+
+/* ====================
+   FIX SPACING
+==================== */
+body:not(.home) .shop-page,
+body:not(.home) .cart-page,
+body:not(.home) .checkout-page,
+body:not(.home) .my-account-page,
+body:not(.home) .contact-page,
+body:not(.home) .single-product-page,
+body:not(.home) .error-404-page {
+  padding-top: 0;
+}
+
+/* ====================
+   CATEGORIES
+==================== */
+.categories-grid {
+  display: grid;
+  gap: 30px;
+}
+
+/* ====================
+   RESPONSIVE
+==================== */
+@media (max-width: 992px) {
+  body:not(.home) .shop-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-navigation {
+    display: none;
+  }
+}
+
+/* ====================
+   CLEAR HOME (QUAN TRỌNG)
+==================== */
+body.home .page-header-breadcrumb,
+body.home .shop-page,
+body.home .cart-page,
+body.home .checkout-page,
+body.home .my-account-page,
+body.home .contact-page,
+body.home .single-product-page {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: none !important;
+}
+
+body.home .page-title {
+  margin-top: 0 !important;
+}   

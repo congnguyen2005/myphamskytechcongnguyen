@@ -1,0 +1,13 @@
+/*
+Theme Name: MyPham Theme
+Theme URI: 
+Author: dang cong nguyen
+Author URI: 
+Description: A complete e-commerce theme for cosmetic products
+Version: 1.0.0
+License: GPL v2 or later
+Text Domain: mypham-theme
+*/
+
+/* Import custom styles */
+@import url('assets/css/custom.css');

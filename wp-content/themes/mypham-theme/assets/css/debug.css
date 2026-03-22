@@ -1,0 +1,16 @@
+/* debug.css - Chỉ dùng để kiểm tra */
+.debug-mode * {
+    outline: 1px solid rgba(255, 0, 0, 0.1);
+}
+
+.debug-mode .site-header {
+    outline: 2px solid red;
+}
+
+.debug-mode .page-header-breadcrumb {
+    outline: 2px solid blue;
+}
+
+.debug-mode .page-title {
+    outline: 2px solid green;
+}
